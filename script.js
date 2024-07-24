@@ -23,6 +23,7 @@ window.addEventListener('load', function(){
                     player.x = 0;
                     player.y = 0;
                     enemies = [];
+                    decos = [];
                     context.textAlign = 'left';
                     requestAnimationFrame(animate)
                 }
@@ -237,6 +238,7 @@ window.addEventListener('load', function(){
         }
         context.fillStyle = 'black';
         context.font = '40px Helvetica';
+        context.fillText('WASD to move', canvas.width/1.2,50);
         context.fillText('Score: ' + score, 20, 50);
         context.fillText('Best Score: ' + bestscore, 20, 90);
         if (gameover) {
