@@ -1,8 +1,8 @@
 window.addEventListener('load', function(){
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
-    canvas.width = 1400;
-    canvas.height = 800;  
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;  
     ctx.imageSmoothingEnabled = false;
     let enemies = [];
     let decos = [];
@@ -213,7 +213,7 @@ window.addEventListener('load', function(){
     let decoTimer = 0;
     let decoInterval = 100;
     let decoRandom = Math.random()*100; 
-
+    
     function handleDecoration(deltaTime) {
         if (decoTimer > decoInterval + decoInterval) {
             decos.push(new Decoration(canvas.width, canvas.height));
